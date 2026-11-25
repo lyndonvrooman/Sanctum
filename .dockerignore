@@ -1,0 +1,10 @@
+.git
+.env
+.env.example
+data/
+Sanctum.Api/data/
+**/bin/
+**/obj/
+**/node_modules/
+Sanctum.Web/dist/
+Sanctum.Web/android/

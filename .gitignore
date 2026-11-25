@@ -1,0 +1,11 @@
+.env
+data/*.db*
+Sanctum.Api/data/*.db*
+bin/
+obj/
+node_modules/
+Sanctum.Web/dist/
+Sanctum.Web/android/
+.vs/
+.vscode/
+.idea/

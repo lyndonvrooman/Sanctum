@@ -1,0 +1,22 @@
+services:
+  sanctum:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sanctum
+    restart: unless-stopped
+    ports:
+      - "8085:8080"
+    environment:
+      - TZ=America/Winnipeg
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/sanctum.db
+      - Sanctum__PublicUrl=${SANCTUM_PUBLIC_URL}
+      - Sanctum__DomEmail=${SANCTUM_DOM_EMAIL}
+      - Sanctum__SubEmail=${SANCTUM_SUB_EMAIL}
+      - Cloudflare__TeamDomain=${CF_TEAM_DOMAIN}
+      - Cloudflare__PolicyAud=${CF_POLICY_AUD}
+      - Cloudflare__ServiceClientId=${CF_ACCESS_CLIENT_ID}
+      - Cloudflare__ServiceClientSecret=${CF_ACCESS_CLIENT_SECRET}
+    volumes:
+      - ./data:/app/data
