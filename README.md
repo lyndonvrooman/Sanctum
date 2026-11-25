@@ -97,8 +97,8 @@ Imported activities are automatically mirrored to both partners so both lists st
 ## Docker & Cloudflare Zero Trust Deployment
 
 1. Copy `.env.example` to `.env` and set your values:
-
-       SANCTUM_PUBLIC_URL=https://sanctum.kinkyfairytales.ca
+kinkyf
+       SANCTUM_PUBLIC_URL=https://sanctum.host.com
        SANCTUM_DOM_EMAIL=dom@example.com
        SANCTUM_SUB_EMAIL=sub@example.com
        CF_TEAM_DOMAIN=https://your-team.cloudflareaccess.com
